@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H2Go Rockets</title>
+    <link rel="icon" href="rocket.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Quicksand; 
+            margin: 0;
+            padding: 0;
+            background-color: #13151a;
+            color: #ffffff;
+        }
+        header {
+            background-color: #0078d7;
+            color: white;
+            padding: 100px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        main.container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: px;
+            margin: 0 auto;
+        }
+        section.product {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 5px;
+            margin-right: 5px
+        }
+        .send-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #0078d7;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+        .send-button:hover {
+            background-color: #005bb5;
+        }
+        .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            animation: fadeinout 5s infinite;
+        }
+        .popup .popuptext {
+            visibility: hidden;
+            width: 160px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -80px;
+        }
+        .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+        .popup .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+        @-webkit-keyframes fadeIn {
+            from {opacity: 0;} 
+            to {opacity: 1;}
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity:1 ;}
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<header>
+    <div style="position: fixed; top: 0; left: 0; width: 100%; background-color: rgba(0, 0, 0, 0); padding: 10px 20px; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 3em;font-weight:bold">H2Go Rockets</span>
+        <nav>
+            <a href="Website.html" style="color: white; text-decoration: none; margin: 0 10px;font-weight:bold">HOME</a>
+            <a href="About.html" style="color: white; text-decoration: none; margin: 0 10px;font-weight:bold">ABOUT</a>
+            <a href="Shop.html" style="color: white; text-decoration: none; margin: 0 10px;font-weight:bold">SHOP</a>
+            <a href="Contact.html" style="color: white; text-decoration: none; margin: 0 10px; font-weight: bold; white-space: nowrap;">CONTACT</a>
+            <a href="#" style="margin: 0 20px;font-weight:bold"></a>
+        </nav>
+    </div>
+    <h1 style="font-size: 5em; font-weight:normal"> Contact</h1>
+</header>
+<main>
+    <div class="container">
+        <h2>Get in Touch</h2>
+        <p>If you have any questions, feel free to reach out to us using the form below.</p>
+            <label for="name" style="display: block; margin-bottom: 10px;">Name:</label>
+            <input type="text" id="name" name="name" required style="width: 20%; padding: 10px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ccc;">
+            
+            <label for="email" style="display: block; margin-bottom: 10px;">Email:</label>
+            <input type="email" id="email" name="email" required style="width: 20%; padding: 10px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ccc;">
+            
+            <label for="message" style="display: block; margin-bottom: 10px;">Message:</label>
+            <input id="message" name="message" rows="5" required style="width: 20%; padding: 10px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ccc; height: 100px;">
+
+            <p>&nbsp</p>
+            
+            <!-- <button type="submit" style="background-color: #0078d7; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Send Message</button> -->
+            <div class="popup">
+                <a onclick="myFunction3()" class="send-button">Send Message</a>
+                <span class="popuptext" id="myPopup3">There is no messaging
+                </span>
+            <script>
+                function myFunction3() {
+                    var popup = document.getElementById("myPopup3");
+                    popup.classList.toggle("show");
+                }
+            </script>
+            </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 H2Go Rockets. All rights reserved.</p>
+</footer>
+</html>
